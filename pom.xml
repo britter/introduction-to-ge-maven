@@ -81,6 +81,40 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.gmavenplus</groupId>
+                <artifactId>gmavenplus-plugin</artifactId>
+                <version>1.6.2</version>
+                <executions>
+                    <execution>
+                        <id>git-status</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <scripts>
+                        <script>file:///${project.basedir}/buildScanUserData.groovy</script>
+                    </scripts>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.groovy</groupId>
+                        <artifactId>groovy-all</artifactId>
+                        <version>2.5.3</version>
+                        <type>pom</type>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-lang3</artifactId>
+                        <version>3.8.1</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                </dependencies>
+            </plugin>
         </plugins>
     </build>
 
