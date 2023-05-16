@@ -45,7 +45,7 @@
             <plugin>
                 <groupId>com.gradle</groupId>
                 <artifactId>gradle-enterprise-maven-extension</artifactId>
-                <version>1.0.3</version>
+                <version>1.6</version>
                 <configuration>
                     <gradleEnterprise xmlns="https://www.gradle.com/gradle-enterprise-maven-project">
                         <buildScan>
